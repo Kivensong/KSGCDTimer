@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>KSGCDTimer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4421EA581D647C6200FD91DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4421EA711D647C6200FD91DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4421EA7C1D647C6200FD91DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
