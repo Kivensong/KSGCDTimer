@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     WEAKSELF(self);
-    [self scheduledDispatchTimerWithName:@"testTimer" timeInterval:1.0 queue:dispatch_get_main_queue() repeats:YES actionOption:KSGCDTimerAction_CancelPrevious action:^{
+    [self scheduledDispatchTimerWithName:@"testTimer" timeInterval:1.0 queue:dispatch_get_main_queue() repeats:YES action:^{
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         weakSelf.testLabel.text = [dateFormatter stringFromDate:[NSDate date]];

@@ -15,7 +15,7 @@
 
 @implementation NSObject (KSGCDTimer)
 
-- (void) scheduledDispatchTimerWithName:(NSString *)timerName timeInterval:(double)interval queue:(dispatch_queue_t)queue repeats:(BOOL)repeats actionOption:(KSGCDTimerAction)option action:(dispatch_block_t)action
+- (void) scheduledDispatchTimerWithName:(NSString *)timerName timeInterval:(double)interval queue:(dispatch_queue_t)queue repeats:(BOOL)repeats action:(dispatch_block_t)action
 {
     if (nil == timerName)
         return;
