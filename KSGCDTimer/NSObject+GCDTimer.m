@@ -42,6 +42,17 @@
     });
 }
 
+- (void)scheduledTaskAfterInterval:(double)interval queue:(dispatch_queue_t)queue action:(dispatch_block_t)action
+{
+    if (nil == queue) {
+        queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(interval * NSEC_PER_SEC)), queue, ^{
+        action();
+    });
+}
+
 - (void)cancelTimerWithName:(NSString *)timerName
 {
     dispatch_source_t timer = [self.timerDictionary objectForKey:timerName];
@@ -68,6 +79,7 @@
 {
     return [self.timerDictionary objectForKey:timerName] != nil;
 }
+
 
 - (NSMutableDictionary* ) timerDictionary
 {

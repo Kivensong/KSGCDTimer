@@ -12,7 +12,7 @@
 
 @interface NSObject (KSGCDTimer)
 /**
- *    开始计时任务
+ *    开始计时
  *
  *    @param timerName 自定义的timer的名称
  *    @param interval  计时时长单位是second
@@ -25,6 +25,18 @@
                                  queue:(dispatch_queue_t)queue
                                repeats:(BOOL)repeats
                                 action:(dispatch_block_t)action;
+
+/**
+ *    计时任务，延迟段时间执行某个操作
+ *
+ *    @param interval 延迟时长 单位是second
+ *    @param queue    任务被放置的队列，也就是aciton执行队列，传入nil则自动启动一个子线程队列中。
+ *    @param action   任务block
+ */
+- (void)scheduledTaskAfterInterval:(double)interval
+                             queue:(dispatch_queue_t)queue
+                            action:(dispatch_block_t)action;
+
 /**
  *    取消timer
  *
